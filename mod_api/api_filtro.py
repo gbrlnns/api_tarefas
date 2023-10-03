@@ -3,8 +3,6 @@ from data_br import convertedata
 def filterlist(lista):
     listafiltrada = []
     for tarefa in lista:
-        tarefa = tarefa['tarefaConsultaWs']
-        tarefa = tarefa[0]
         if tarefa['codigoSituacao'] == 2:
             continue
         elif tarefa['codigoSituacao'] == 3:
