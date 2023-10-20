@@ -1,9 +1,10 @@
 import requests
 from time import sleep
 
+
 def getlist(processo, token):
-    headers = {'Content-Type':'application/json', 'accept':'application/json', 'Authorization':'Bearer '+token}
-    proc_json = {'numeroProcesso':str(processo)}
+    headers = {'Content-Type': 'application/json', 'accept': 'application/json', 'Authorization': 'Bearer '+token}
+    proc_json = {'numeroProcesso': str(processo)}
     resposta = requests.post('https://api.projurisadv.com.br/adv-service/tarefa/consulta-com-paginacao', headers=headers, json=proc_json)
     if resposta.status_code == 204:
         return False

@@ -5,7 +5,7 @@ from configparser_crypt import ConfigParserCrypt
 from time import sleep
 
 def tokencheck():
-    if exists('token') == True:
+    if exists('token'):
         return True
     else:
         return False
@@ -28,6 +28,6 @@ def apilogin():
         json = resposta.json()
         return json["access_token"]
     else:
-        print ("Falha no login. Verifique os dados e a sua conexão e tente novamente.")
+        print("Falha no login. Verifique os dados e a sua conexão e tente novamente.")
         sleep(4)
         exit()
